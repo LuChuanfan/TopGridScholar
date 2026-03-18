@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5a623;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" rx="12" fill="url(#bg)" />
+  <!-- decorative line -->
+  <rect x="50" y="145" width="700" height="3" rx="1.5" fill="url(#accent)" opacity="0.6" />
+  <!-- icon: book/paper -->
+  <text x="50" y="105" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif" font-size="56">📚</text>
+  <!-- title -->
+  <text x="120" y="100" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="1">TopGridScholar</text>
+  <!-- subtitle -->
+  <text x="122" y="132" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#a0aec0">Academic Paper Search &amp; Download — IEEE · Nature · Semantic Scholar</text>
+</svg>

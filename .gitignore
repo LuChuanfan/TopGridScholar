@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Playwright
+playwright-report/
+
+# Project runtime data (MUST NOT be committed)
+data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
