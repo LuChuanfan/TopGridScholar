@@ -37,17 +37,17 @@ Run the following commands in CMD (Command Prompt) or PowerShell:
    pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip
    ```
 
-2. (First time) Set up browser login:
-   ```bash
-   topgridscholar setup
-   ```
-   Chromium browser will be installed automatically on first run. A Chromium window will then open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. **If your campus network already grants access automatically (IP-based authentication), you can skip this step.**
-
-3. Launch:
+2. Launch:
    ```bash
    topgridscholar
    ```
-   Open http://localhost:8501 in your browser to use the application.
+   Chromium browser will be installed automatically on first run, please wait patiently. After startup, the browser will open automatically. **(If the browser does not open automatically, visit http://localhost:8501 manually)**
+
+3. (Optional) Set up browser login:
+   ```bash
+   topgridscholar setup
+   ```
+   If your campus network cannot directly download IEEE/Nature full-text PDFs, you need to run this step to log in via the browser. A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. **If your campus network already grants access automatically (IP-based authentication), you can skip this step.**
 
 ## Configuration
 

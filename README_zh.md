@@ -37,17 +37,17 @@
    pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip
    ```
 
-2. （首次使用）设置浏览器登录：
-   ```bash
-   topgridscholar setup
-   ```
-   首次运行时会自动安装 Chromium 浏览器。安装完成后会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。**如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。**
-
-3. 启动：
+2. 启动：
    ```bash
    topgridscholar
    ```
-   在浏览器中打开 http://localhost:8501 即可使用。
+   首次运行时会自动安装 Chromium 浏览器，请耐心等待。启动后浏览器会自动打开。**（如果浏览器没有自动打开，请手动在浏览器中访问 http://localhost:8501）**
+
+3. （可选）设置浏览器登录：
+   ```bash
+   topgridscholar setup
+   ```
+   如果你的校园网不能直接下载 IEEE/Nature 全文 PDF，需要运行此步骤进行浏览器登录。会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。**如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。**
 
 ## 配置
 
