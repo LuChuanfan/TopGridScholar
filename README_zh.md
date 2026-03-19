@@ -37,18 +37,13 @@
    pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip
    ```
 
-2. 安装 Playwright 浏览器：
-   ```bash
-   playwright install chromium
-   ```
-
-3. （首次使用）设置浏览器登录：
+2. （首次使用）设置浏览器登录：
    ```bash
    topgridscholar setup
    ```
-   会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。**如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。**
+   首次运行时会自动安装 Chromium 浏览器。安装完成后会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。**如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。**
 
-4. 启动：
+3. 启动：
    ```bash
    topgridscholar
    ```
@@ -96,7 +91,7 @@ Web 界面包含三个页面：
 ## 常见问题
 
 **Q：浏览器无法打开 / Playwright 在 Windows 上报错**
-A：确保已运行 `playwright install chromium`。工具在 Windows 上会自动使用 `ProactorEventLoop` 以保证兼容性。
+A：Chromium 浏览器会在首次运行时自动安装。如果自动安装失败，可以手动运行：`playwright install chromium`。工具在 Windows 上会自动使用 `ProactorEventLoop` 以保证兼容性。
 
 **Q：下载的 PDF 为空或文件很小**
 A：通常是因为没有全文访问权限。请确认已连接校园网或 VPN。也有可能是你的学校没有订阅该期刊的访问权限。

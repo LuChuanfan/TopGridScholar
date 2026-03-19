@@ -34,9 +34,8 @@ st.markdown("---")
 with st.expander("首次使用说明"):
     st.markdown("""
 1. 安装：`pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip`
-2. 安装浏览器：`playwright install chromium`
-3. 登录设置：`topgridscholar setup`（打开浏览器，手动登录学校账号）
-4. 启动应用：`topgridscholar`
+2. 登录设置：`topgridscholar setup`（首次运行自动安装浏览器，然后手动登录学校账号）
+3. 启动应用：`topgridscholar`
 """)
 
 with st.expander("注意事项"):

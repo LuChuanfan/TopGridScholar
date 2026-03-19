@@ -37,18 +37,13 @@ Run the following commands in CMD (Command Prompt) or PowerShell:
    pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip
    ```
 
-2. Install the Chromium browser for Playwright:
-   ```bash
-   playwright install chromium
-   ```
-
-3. (First time) Set up browser login:
+2. (First time) Set up browser login:
    ```bash
    topgridscholar setup
    ```
-   A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. **If your campus network already grants access automatically (IP-based authentication), you can skip this step.**
+   Chromium browser will be installed automatically on first run. A Chromium window will then open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. **If your campus network already grants access automatically (IP-based authentication), you can skip this step.**
 
-4. Launch:
+3. Launch:
    ```bash
    topgridscholar
    ```
@@ -96,7 +91,7 @@ The web UI has three pages:
 ## FAQ
 
 **Q: The browser doesn't open / Playwright fails on Windows.**
-A: Make sure you ran `playwright install chromium`. On Windows, the tool automatically uses `ProactorEventLoop` for compatibility.
+A: Chromium is installed automatically on first run. If automatic installation fails, you can try manually: `playwright install chromium`. On Windows, the tool automatically uses `ProactorEventLoop` for compatibility.
 
 **Q: PDFs download as empty or very small files.**
 A: This usually means you don't have access to the full text. Check that you're on your campus network or connected to your institution's VPN. It's also possible that your institution does not have a subscription to that particular journal.
