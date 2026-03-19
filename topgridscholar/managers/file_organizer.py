@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
-from config import DOWNLOADS_DIR, MAX_FILENAME_LENGTH, MAX_TITLE_LENGTH
-from models import Paper
+from topgridscholar.config import DOWNLOADS_DIR, MAX_FILENAME_LENGTH, MAX_TITLE_LENGTH
+from topgridscholar.models import Paper
 
 
 class FileOrganizer:

@@ -5,10 +5,10 @@ import asyncio
 from typing import AsyncGenerator
 from urllib.parse import quote_plus
 from playwright.async_api import BrowserContext, Page
-from models import Paper, Author
-from scrapers.base import BaseScraper
-from scrapers.anti_scraping import anti_scraping_pause, random_delay, human_scroll
-from config import (
+from topgridscholar.models import Paper, Author
+from topgridscholar.scrapers.base import BaseScraper
+from topgridscholar.scrapers.anti_scraping import anti_scraping_pause, random_delay, human_scroll
+from topgridscholar.config import (
     NATURE_SEARCH_URL, NATURE_BASE_URL,
     SEARCH_PAGE_DELAY, DETAIL_PAGE_DELAY, DOWNLOAD_DELAY,
 )

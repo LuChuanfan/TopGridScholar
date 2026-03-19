@@ -4,8 +4,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 import pandas as pd
-from config import SESSIONS_DIR
-from models import Paper
+from topgridscholar.config import SESSIONS_DIR
+from topgridscholar.models import Paper
 
 
 class ResultStore:

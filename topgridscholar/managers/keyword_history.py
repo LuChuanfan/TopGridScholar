@@ -2,7 +2,7 @@
 
 import json
 from pathlib import Path
-from config import KEYWORD_HISTORY_FILE
+from topgridscholar.config import KEYWORD_HISTORY_FILE
 
 MAX_HISTORY = 50
 

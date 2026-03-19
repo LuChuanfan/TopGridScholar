@@ -10,7 +10,7 @@ except ImportError:
     pass
 
 # === 路径配置 ===
-_DEFAULT_BASE_DIR = Path(__file__).resolve().parent
+_DEFAULT_BASE_DIR = Path.cwd()
 # 允许通过环境变量覆盖（方便把 data 放到别的盘）
 BASE_DIR = Path(os.getenv("PAPERDOWNLOADER_BASE_DIR", str(_DEFAULT_BASE_DIR))).expanduser().resolve()
 DATA_DIR = BASE_DIR / "data"

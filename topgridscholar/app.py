@@ -33,10 +33,10 @@ st.markdown("---")
 
 with st.expander("首次使用说明"):
     st.markdown("""
-1. 安装依赖：`pip install -r requirements.txt`
+1. 安装：`pip install git+https://github.com/LuChuanfan/TopGridScholar.git`
 2. 安装浏览器：`playwright install chromium`
-3. 登录设置：`python setup_browser.py`（打开浏览器，手动登录学校账号）
-4. 启动应用：`streamlit run app.py`
+3. 登录设置：`topgridscholar setup`（打开浏览器，手动登录学校账号）
+4. 启动应用：`topgridscholar`
 """)
 
 with st.expander("注意事项"):

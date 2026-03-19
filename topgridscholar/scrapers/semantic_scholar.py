@@ -4,8 +4,8 @@ from __future__ import annotations
 import asyncio
 import aiohttp
 from typing import AsyncGenerator
-from models import Paper, Author
-from config import SEMANTIC_SCHOLAR_API_KEY, SEMANTIC_SCHOLAR_SEARCH_URL
+from topgridscholar.models import Paper, Author
+from topgridscholar.config import SEMANTIC_SCHOLAR_API_KEY, SEMANTIC_SCHOLAR_SEARCH_URL
 
 # API 每次最多返回 100 条
 _PAGE_SIZE = 100

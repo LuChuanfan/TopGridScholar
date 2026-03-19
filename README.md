@@ -29,8 +29,9 @@ A Streamlit-based tool for searching and batch-downloading academic papers from 
 ## Quick Start
 
 ```bash
-pip install -r requirements.txt && playwright install chromium
-streamlit run app.py
+pip install git+https://github.com/LuChuanfan/TopGridScholar.git
+playwright install chromium
+topgridscholar
 ```
 
 ## Prerequisites
@@ -41,34 +42,19 @@ streamlit run app.py
 
 ## Installation
 
-1. Clone the repository:
+1. Install the package:
    ```bash
-   git clone https://github.com/LuChuanfan/TopGridScholar.git
-   cd TopGridScholar
+   pip install git+https://github.com/LuChuanfan/TopGridScholar.git
    ```
 
-2. Create a virtual environment (recommended):
-   ```bash
-   python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # macOS / Linux
-   source .venv/bin/activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Install the Chromium browser for Playwright:
+2. Install the Chromium browser for Playwright:
    ```bash
    playwright install chromium
    ```
 
-5. (First time) Set up browser login:
+3. (First time) Set up browser login:
    ```bash
-   python setup_browser.py
+   topgridscholar setup
    ```
    A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally.
 
@@ -83,12 +69,12 @@ cp .env.example .env
 | Variable | Description | Required |
 |---|---|---|
 | `SEMANTIC_SCHOLAR_API_KEY` | API key for Semantic Scholar CCF-A/B search | Optional |
-| `PAPERDOWNLOADER_BASE_DIR` | Override the default data directory | Optional |
+| `PAPERDOWNLOADER_BASE_DIR` | Override the default data directory (defaults to current working directory) | Optional |
 
 ## Usage
 
 ```bash
-streamlit run app.py
+topgridscholar
 ```
 
 The web UI has three pages:

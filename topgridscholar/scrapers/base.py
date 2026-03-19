@@ -3,7 +3,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import AsyncGenerator
 from playwright.async_api import BrowserContext, Page
-from models import Paper
+from topgridscholar.models import Paper
 
 
 class BaseScraper(ABC):

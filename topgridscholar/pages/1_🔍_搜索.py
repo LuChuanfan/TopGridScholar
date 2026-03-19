@@ -1,14 +1,14 @@
 import time
 import streamlit as st
-from bridge import AsyncBridge
-from config import CHROME_PROFILE_DIR, BROWSER_ARGS
-from models import Paper
-from scrapers.ieee import IEEEScraper
-from scrapers.nature import NatureScraper
-from scrapers.semantic_scholar import SemanticScholarScraper
-from managers.result_store import ResultStore
-from managers.keyword_history import KeywordHistory
-from venues import VENUE_GROUPS
+from topgridscholar.bridge import AsyncBridge
+from topgridscholar.config import CHROME_PROFILE_DIR, BROWSER_ARGS
+from topgridscholar.models import Paper
+from topgridscholar.scrapers.ieee import IEEEScraper
+from topgridscholar.scrapers.nature import NatureScraper
+from topgridscholar.scrapers.semantic_scholar import SemanticScholarScraper
+from topgridscholar.managers.result_store import ResultStore
+from topgridscholar.managers.keyword_history import KeywordHistory
+from topgridscholar.venues import VENUE_GROUPS
 
 st.set_page_config(page_title="搜索 - PaperDownloader", page_icon="🔍", layout="wide")
 st.title("🔍 论文搜索")

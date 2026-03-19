@@ -29,8 +29,9 @@
 ## 快速开始
 
 ```bash
-pip install -r requirements.txt && playwright install chromium
-streamlit run app.py
+pip install git+https://github.com/LuChuanfan/TopGridScholar.git
+playwright install chromium
+topgridscholar
 ```
 
 ## 环境要求
@@ -41,34 +42,19 @@ streamlit run app.py
 
 ## 安装步骤
 
-1. 克隆仓库：
+1. 安装：
    ```bash
-   git clone https://github.com/LuChuanfan/TopGridScholar.git
-   cd TopGridScholar
+   pip install git+https://github.com/LuChuanfan/TopGridScholar.git
    ```
 
-2. 创建虚拟环境（推荐）：
-   ```bash
-   python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # macOS / Linux
-   source .venv/bin/activate
-   ```
-
-3. 安装依赖：
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. 安装 Playwright 浏览器：
+2. 安装 Playwright 浏览器：
    ```bash
    playwright install chromium
    ```
 
-5. （首次使用）设置浏览器登录：
+3. （首次使用）设置浏览器登录：
    ```bash
-   python setup_browser.py
+   topgridscholar setup
    ```
    会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。
 
@@ -83,12 +69,12 @@ cp .env.example .env
 | 变量 | 说明 | 是否必需 |
 |---|---|---|
 | `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API 密钥，用于 CCF-A/B 搜索 | 可选 |
-| `PAPERDOWNLOADER_BASE_DIR` | 自定义数据存储目录（默认为项目目录） | 可选 |
+| `PAPERDOWNLOADER_BASE_DIR` | 自定义数据存储目录（默认为当前工作目录） | 可选 |
 
 ## 使用方法
 
 ```bash
-streamlit run app.py
+topgridscholar
 ```
 
 Web 界面包含三个页面：

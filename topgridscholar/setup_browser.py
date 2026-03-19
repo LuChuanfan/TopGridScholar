@@ -4,7 +4,7 @@
 """
 import asyncio
 from playwright.async_api import async_playwright
-from config import CHROME_PROFILE_DIR, BROWSER_ARGS
+from topgridscholar.config import CHROME_PROFILE_DIR, BROWSER_ARGS
 
 
 async def main():
@@ -51,7 +51,7 @@ async def main():
             pass
 
     print()
-    print("浏览器配置已保存！现在可以运行 streamlit run app.py")
+    print("浏览器配置已保存！现在可以运行 topgridscholar 启动应用")
 
 
 if __name__ == "__main__":

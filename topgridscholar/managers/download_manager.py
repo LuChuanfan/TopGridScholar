@@ -4,13 +4,13 @@ import json
 import asyncio
 from pathlib import Path
 from playwright.async_api import BrowserContext
-from config import DOWNLOAD_STATE_FILE, MAX_RETRY
-from models import Paper, DownloadTask, DownloadStatus
-from managers.file_organizer import FileOrganizer
-from scrapers.base import BaseScraper
-from scrapers.ieee import IEEEScraper
-from scrapers.nature import NatureScraper
-from scrapers.semantic_scholar import SemanticScholarScraper
+from topgridscholar.config import DOWNLOAD_STATE_FILE, MAX_RETRY
+from topgridscholar.models import Paper, DownloadTask, DownloadStatus
+from topgridscholar.managers.file_organizer import FileOrganizer
+from topgridscholar.scrapers.base import BaseScraper
+from topgridscholar.scrapers.ieee import IEEEScraper
+from topgridscholar.scrapers.nature import NatureScraper
+from topgridscholar.scrapers.semantic_scholar import SemanticScholarScraper
 
 
 class DownloadManager:

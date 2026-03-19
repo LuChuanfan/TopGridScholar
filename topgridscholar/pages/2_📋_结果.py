@@ -1,9 +1,9 @@
 import streamlit as st
 from pathlib import Path
-from models import Paper
-from managers.result_store import ResultStore
-from managers.download_manager import DownloadManager
-from config import DATA_DIR
+from topgridscholar.models import Paper
+from topgridscholar.managers.result_store import ResultStore
+from topgridscholar.managers.download_manager import DownloadManager
+from topgridscholar.config import DATA_DIR
 
 st.set_page_config(page_title="结果 - PaperDownloader", page_icon="📋", layout="wide")
 st.title("📋 搜索结果")

@@ -1,9 +1,9 @@
 import time
 import streamlit as st
-from bridge import AsyncBridge
-from config import CHROME_PROFILE_DIR, BROWSER_ARGS, DOWNLOADS_DIR
-from models import DownloadStatus
-from managers.download_manager import DownloadManager
+from topgridscholar.bridge import AsyncBridge
+from topgridscholar.config import CHROME_PROFILE_DIR, BROWSER_ARGS, DOWNLOADS_DIR
+from topgridscholar.models import DownloadStatus
+from topgridscholar.managers.download_manager import DownloadManager
 
 st.set_page_config(page_title="下载 - PaperDownloader", page_icon="📥", layout="wide")
 st.title("📥 下载管理")
