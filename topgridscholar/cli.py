@@ -187,6 +187,15 @@ def _ensure_chromium():
     sys.exit(1)
 
 
+def _ensure_streamlit_config():
+    """创建 Streamlit 配置文件，跳过首次运行的邮箱提示。"""
+    config_dir = Path.home() / ".streamlit"
+    credentials_file = config_dir / "credentials.toml"
+    if not credentials_file.exists():
+        config_dir.mkdir(parents=True, exist_ok=True)
+        credentials_file.write_text('[general]\nemail = ""\n', encoding="utf-8")
+
+
 def main():
     pkg_dir = Path(__file__).resolve().parent
     cmd = sys.argv[1] if len(sys.argv) > 1 else "run"
@@ -196,6 +205,7 @@ def main():
         subprocess.run([sys.executable, str(pkg_dir / "setup_browser.py")])
     else:
         _ensure_chromium()
+        _ensure_streamlit_config()
         subprocess.run([
             sys.executable, "-m", "streamlit", "run",
             str(pkg_dir / "app.py"),
