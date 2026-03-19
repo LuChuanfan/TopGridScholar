@@ -46,7 +46,7 @@ Run the following commands in CMD (Command Prompt) or PowerShell:
    ```bash
    topgridscholar setup
    ```
-   A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. If your campus network already grants access automatically (IP-based authentication), you can skip this step.
+   A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. **If your campus network already grants access automatically (IP-based authentication), you can skip this step.**
 
 4. Launch:
    ```bash

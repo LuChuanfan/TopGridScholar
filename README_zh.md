@@ -46,7 +46,7 @@
    ```bash
    topgridscholar setup
    ```
-   会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。
+   会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。**如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。**
 
 4. 启动：
    ```bash
