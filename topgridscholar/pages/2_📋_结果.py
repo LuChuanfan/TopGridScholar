@@ -207,7 +207,7 @@ for i, p in enumerate(filtered):
     row_num = i + 1
 
     # 布局：checkbox | 标题 | 期刊 | 年份 | 来源 | 作者
-    col_chk, col_title, col_journal, col_year, col_src, col_author = st.columns([0.3, 4, 1.8, 0.3, 0.5, 1.8])
+    col_chk, col_title, col_journal, col_year, col_src, col_author = st.columns([0.5, 3, 1.8, 0.5, 0.5, 1.8])
 
     with col_chk:
         new_val = st.checkbox(
