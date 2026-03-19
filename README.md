@@ -34,7 +34,7 @@ Run the following commands in CMD (Command Prompt) or PowerShell:
 
 1. Install the package:
    ```bash
-   pip install git+https://github.com/LuChuanfan/TopGridScholar.git
+   pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip
    ```
 
 2. Install the Chromium browser for Playwright:

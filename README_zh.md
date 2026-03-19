@@ -34,7 +34,7 @@
 
 1. 安装：
    ```bash
-   pip install git+https://github.com/LuChuanfan/TopGridScholar.git
+   pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip
    ```
 
 2. 安装 Playwright 浏览器：

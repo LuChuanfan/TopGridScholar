@@ -33,7 +33,7 @@ st.markdown("---")
 
 with st.expander("首次使用说明"):
     st.markdown("""
-1. 安装：`pip install git+https://github.com/LuChuanfan/TopGridScholar.git`
+1. 安装：`pip install https://github.com/LuChuanfan/TopGridScholar/archive/refs/tags/v0.1.0.zip`
 2. 安装浏览器：`playwright install chromium`
 3. 登录设置：`topgridscholar setup`（打开浏览器，手动登录学校账号）
 4. 启动应用：`topgridscholar`
