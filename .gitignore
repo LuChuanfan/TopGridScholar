@@ -26,3 +26,6 @@ data/
 Thumbs.db
 .vscode/
 .idea/
+
+# Personal notes
+claude.md
