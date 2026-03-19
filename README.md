@@ -47,6 +47,7 @@ Run the following commands in CMD (Command Prompt) or PowerShell:
    ```bash
    topgridscholar
    ```
+   Open http://localhost:8501 in your browser to use the application.
 
 ## Configuration
 

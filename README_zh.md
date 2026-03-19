@@ -47,6 +47,7 @@
    ```bash
    topgridscholar
    ```
+   在浏览器中打开 http://localhost:8501 即可使用。
 
 ## 配置
 
