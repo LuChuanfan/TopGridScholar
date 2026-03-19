@@ -26,21 +26,11 @@ A Streamlit-based tool for searching and batch-downloading academic papers from 
 - **Metadata export** — export search results to CSV (title, authors, affiliations, DOI, abstract, etc.)
 - **Session persistence** — download queue survives restarts; interrupted downloads resume automatically
 
-## Quick Start
+## Getting Started
 
-```bash
-pip install git+https://github.com/LuChuanfan/TopGridScholar.git
-playwright install chromium
-topgridscholar
-```
+**Prerequisites:** Python 3.10+, institutional network access (campus VPN or on-campus) for IEEE/Nature full-text downloads.
 
-## Prerequisites
-
-- **Python 3.10+**
-- **Institutional network access** (campus VPN or on-campus network) for IEEE/Nature full-text downloads
-- (Optional) A [Semantic Scholar API key](https://www.semanticscholar.org/product/api) for CCF-A/B search
-
-## Installation
+Run the following commands in CMD (Command Prompt) or PowerShell:
 
 1. Install the package:
    ```bash
@@ -56,26 +46,31 @@ topgridscholar
    ```bash
    topgridscholar setup
    ```
-   A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally.
+   A Chromium window will open. Log in to IEEE Xplore / Nature through your institution, then close the browser. Your session cookies are saved locally. If your campus network already grants access automatically (IP-based authentication), you can skip this step.
+
+4. Launch:
+   ```bash
+   topgridscholar
+   ```
 
 ## Configuration
 
-Copy the example environment file and edit it:
+All configuration is optional — the tool works out of the box with default settings.
 
-```bash
-cp .env.example .env
-```
+| Variable | Description |
+|---|---|
+| `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API key. Only needed if you encounter 401/403 errors when using CCF-A/B search. Get one for free at [Semantic Scholar](https://www.semanticscholar.org/product/api) |
+| `PAPERDOWNLOADER_BASE_DIR` | Custom data directory. By default, data is stored in `%USERPROFILE%\topgridscholar_data\` (under your C: drive user folder). Set this if you want to save papers to a different location (e.g. D: drive) |
 
-| Variable | Description | Required |
-|---|---|---|
-| `SEMANTIC_SCHOLAR_API_KEY` | API key for Semantic Scholar CCF-A/B search | Optional |
-| `PAPERDOWNLOADER_BASE_DIR` | Override the default data directory (defaults to current working directory) | Optional |
+**How to set environment variables on Windows (using `PAPERDOWNLOADER_BASE_DIR` as an example):**
+
+1. Press `Win + I` to open Settings, search for "environment variables", click "Edit the system environment variables"
+2. Click the "Environment Variables" button
+3. Under "User variables", click "New"
+4. Set variable name to `PAPERDOWNLOADER_BASE_DIR`, set value to your desired path (e.g. `D:\MyPapers`)
+5. Click OK to save. Reopen your CMD window for the change to take effect
 
 ## Usage
-
-```bash
-topgridscholar
-```
 
 The web UI has three pages:
 
@@ -95,8 +90,8 @@ The web UI has three pages:
 
 - **Institutional access required** — IEEE and Nature PDF downloads rely on your campus network or VPN. Without it, you can still search and view metadata, but PDFs may not be available.
 - **Respect rate limits** — the tool includes built-in delays between requests. Do not remove or reduce them, as this may trigger anti-scraping protections and get your IP blocked.
-- **Browser profile** — login cookies are stored in `data/chrome_profile/`. Do not share this directory.
-- **Data directory** — all runtime data (sessions, downloads, state) is stored in `data/` and excluded from git.
+- **Browser profile** — login cookies are stored in the `chrome_profile/` subdirectory of your data folder. Do not share this directory.
+- **Data directory** — all runtime data (sessions, downloads, state) is stored in `%USERPROFILE%\topgridscholar_data\data\` by default. This can be customized via environment variable.
 
 ## FAQ
 
@@ -104,13 +99,13 @@ The web UI has three pages:
 A: Make sure you ran `playwright install chromium`. On Windows, the tool automatically uses `ProactorEventLoop` for compatibility.
 
 **Q: PDFs download as empty or very small files.**
-A: This usually means you don't have access to the full text. Check that you're on your campus network or connected to your institution's VPN.
+A: This usually means you don't have access to the full text. Check that you're on your campus network or connected to your institution's VPN. It's also possible that your institution does not have a subscription to that particular journal.
 
 **Q: Semantic Scholar search returns no results.**
-A: Try without venue filters first. If you get a 401/403 error, set `SEMANTIC_SCHOLAR_API_KEY` in your `.env` file.
+A: Try without venue filters first. If you get a 401/403 error, set the `SEMANTIC_SCHOLAR_API_KEY` environment variable.
 
 **Q: Can I change where files are saved?**
-A: Set `PAPERDOWNLOADER_BASE_DIR` in `.env` to any path you like. The tool will create `data/` subdirectories there.
+A: Set the `PAPERDOWNLOADER_BASE_DIR` environment variable to any path (e.g. `D:\MyPapers`). The tool will create `data/` subdirectories there. See the Configuration section above for how to set environment variables.
 
 ## License
 

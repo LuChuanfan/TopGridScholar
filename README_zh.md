@@ -26,21 +26,11 @@
 - **元数据导出** — 搜索结果可导出为 CSV（标题、作者、单位、DOI、摘要等）
 - **断点续传** — 下载队列持久化，关闭应用后重启可继续
 
-## 快速开始
+## 开始使用
 
-```bash
-pip install git+https://github.com/LuChuanfan/TopGridScholar.git
-playwright install chromium
-topgridscholar
-```
+**环境要求：** Python 3.10+，校园网络（校园 VPN 或校内网络）用于 IEEE/Nature 全文下载。
 
-## 环境要求
-
-- **Python 3.10+**
-- **校园网络**（校园 VPN 或校内网络）用于 IEEE/Nature 全文下载
-- （可选）[Semantic Scholar API Key](https://www.semanticscholar.org/product/api) 用于 CCF-A/B 搜索
-
-## 安装步骤
+以下命令在 CMD（命令提示符）或 PowerShell 中运行：
 
 1. 安装：
    ```bash
@@ -56,26 +46,31 @@ topgridscholar
    ```bash
    topgridscholar setup
    ```
-   会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。
+   会打开一个 Chromium 窗口，请通过学校网络登录 IEEE Xplore / Nature，完成后关闭浏览器即可。登录状态会保存在本地。如果你的校园网已自动授权访问（IP 认证），则可跳过此步骤。
+
+4. 启动：
+   ```bash
+   topgridscholar
+   ```
 
 ## 配置
 
-复制环境变量示例文件并编辑：
+以下配置均为可选，默认即可使用。
 
-```bash
-cp .env.example .env
-```
+| 变量 | 说明 |
+|---|---|
+| `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API 密钥。仅在使用 CCF-A/B 搜索时遇到 401/403 错误才需要设置，可从 [Semantic Scholar](https://www.semanticscholar.org/product/api) 免费申请 |
+| `PAPERDOWNLOADER_BASE_DIR` | 自定义数据存储目录。默认存储在 `%USERPROFILE%\topgridscholar_data\`（即 C 盘用户目录下）。如果想把论文下载到其他位置（如 D 盘），需要设置此变量 |
 
-| 变量 | 说明 | 是否必需 |
-|---|---|---|
-| `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API 密钥，用于 CCF-A/B 搜索 | 可选 |
-| `PAPERDOWNLOADER_BASE_DIR` | 自定义数据存储目录（默认为当前工作目录） | 可选 |
+**Windows 设置环境变量方法（以 `PAPERDOWNLOADER_BASE_DIR` 为例）：**
+
+1. 按 `Win + I` 打开设置，搜索"环境变量"，点击"编辑系统环境变量"
+2. 点击"环境变量"按钮
+3. 在"用户变量"中点击"新建"
+4. 变量名填 `PAPERDOWNLOADER_BASE_DIR`，变量值填目标路径（如 `D:\我的论文`）
+5. 确定保存后，重新打开 CMD 窗口即可生效
 
 ## 使用方法
-
-```bash
-topgridscholar
-```
 
 Web 界面包含三个页面：
 
@@ -95,8 +90,8 @@ Web 界面包含三个页面：
 
 - **需要校园网权限** — IEEE 和 Nature 的 PDF 下载依赖校园网络或 VPN。没有权限时仍可搜索和查看元数据，但无法下载全文。
 - **请遵守访问频率限制** — 工具内置了请求间隔延迟，请勿移除或缩短，否则可能触发反爬机制导致 IP 被封。
-- **浏览器配置** — 登录 Cookie 保存在 `data/chrome_profile/`，请勿分享此目录。
-- **数据目录** — 所有运行时数据（会话、下载、状态）存储在 `data/`，已被 `.gitignore` 排除。
+- **浏览器配置** — 登录 Cookie 保存在数据目录的 `chrome_profile/` 下，请勿分享此目录。
+- **数据目录** — 所有运行时数据（会话、下载、状态）默认存储在 `%USERPROFILE%\topgridscholar_data\data\`，可通过环境变量自定义。
 
 ## 常见问题
 
@@ -104,13 +99,13 @@ Web 界面包含三个页面：
 A：确保已运行 `playwright install chromium`。工具在 Windows 上会自动使用 `ProactorEventLoop` 以保证兼容性。
 
 **Q：下载的 PDF 为空或文件很小**
-A：通常是因为没有全文访问权限。请确认已连接校园网或 VPN。
+A：通常是因为没有全文访问权限。请确认已连接校园网或 VPN。也有可能是你的学校没有订阅该期刊的访问权限。
 
 **Q：Semantic Scholar 搜索无结果**
-A：先尝试不加期刊筛选。如果出现 401/403 错误，请在 `.env` 文件中设置 `SEMANTIC_SCHOLAR_API_KEY`。
+A：先尝试不加期刊筛选。如果出现 401/403 错误，请设置环境变量 `SEMANTIC_SCHOLAR_API_KEY`。
 
 **Q：如何更改文件保存位置？**
-A：在 `.env` 中设置 `PAPERDOWNLOADER_BASE_DIR` 为任意路径，工具会自动在该路径下创建 `data/` 子目录。
+A：设置环境变量 `PAPERDOWNLOADER_BASE_DIR` 为任意路径（如 `D:\我的论文`），工具会自动在该路径下创建 `data/` 子目录。设置方法见上方「配置」部分。
 
 ## 许可证
 
