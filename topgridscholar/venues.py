@@ -45,6 +45,11 @@ VENUE_GROUPS = OrderedDict({
             "IEEE Transactions on Vehicular Technology",
             # --- 机器人 ---
             "IEEE Transactions on Robotics",
+            "IEEE/ASME Transactions on Mechatronics",
+            "IEEE Transactions on Automation Science and Engineering",
+            "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+            "IEEE Transactions on Human-Machine Systems",
+            "IEEE Robotics and Automation Letters",
         ],
     },
 
@@ -74,6 +79,7 @@ VENUE_GROUPS = OrderedDict({
             "COLING",                # International Conference on Computational Linguistics
             "ICRA",                  # IEEE International Conference on Robotics and Automation
             "IROS",                  # IEEE/RSJ International Conference on Intelligent Robots and Systems
+            "CoRL",                  # Conference on Robot Learning
             "ICDM",                  # IEEE International Conference on Data Mining
             "ECAI",                  # European Conference on Artificial Intelligence
             "AAMAS",                 # International Conference on Autonomous Agents and Multi-Agent Systems
@@ -89,6 +95,7 @@ VENUE_GROUPS = OrderedDict({
             "Neural Computation",                # MIT Press
             "Computational Linguistics",         # MIT Press
             "Knowledge and Information Systems",  # KAIS
+            "Robotics and Autonomous Systems",   # Elsevier
         ],
         # Semantic Scholar 返回的 venue 全称白名单，用于本地二次过滤
         "venue_fullnames": [
@@ -116,6 +123,7 @@ VENUE_GROUPS = OrderedDict({
             "IEEE International Conference on Robotics and Automation",
             "IEEE/RJS International Conference on Intelligent RObots and Systems",
             "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+            "Conference on Robot Learning",
             "IEEE International Conference on Data Mining",
             "European Conference on Artificial Intelligence",
             "International Conference on Autonomous Agents and Multi-Agent Systems",
@@ -132,6 +140,7 @@ VENUE_GROUPS = OrderedDict({
             "Neural Computation",
             "Computational Linguistics",
             "Knowledge and Information Systems",
+            "Robotics and Autonomous Systems",
         ],
     },
 
